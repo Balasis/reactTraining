@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "mock:server": "json-server --watch db.json --port 8080"
+    "server": "json-server --watch db.json --port 8080"
   },
   "dependencies": {
     "react": "^19.2.0",

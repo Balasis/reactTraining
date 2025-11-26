@@ -1,6 +1,5 @@
-// CategoryButton.jsx
-export default function CategoryButton() {
+export default function CategoryButton({onOpenSidebar}) {
     return (
-        <button className="category-btn">Categories</button>
+        <button className="category-btn" onClick={onOpenSidebar}>Categories</button>
     );
 }

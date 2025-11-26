@@ -6,7 +6,6 @@ export default function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                {/* Later you can add more pages */}
             </Routes>
         </Router>
     );

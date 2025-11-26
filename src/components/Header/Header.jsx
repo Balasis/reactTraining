@@ -5,11 +5,11 @@ import UserIcon from '@components/Header/UserIcon';
 import CartIcon from '@components/Header/CartIcon';
 import '@styles/Header.css';
 
-export default function Header() {
+export default function Header({ onOpenSidebar }) {
     return (
         <header className="header">
             <Logo />
-            <SearchBar />
+            <SearchBar onOpenSidebar ={onOpenSidebar}/>
             <div className="header-right">
                 <UserIcon />
                 <CartIcon />
