@@ -1,0 +1,11 @@
+{
+  "products": [
+    { "id": 1, "name": "T-shirt", "price": 19.99 },
+    { "id": 2, "name": "Sneakers", "price": 79.99 },
+    { "id": 3, "name": "Jeans", "price": 49.99 }
+  ],
+  "users": [
+    { "id": 1, "name": "Alice" },
+    { "id": 2, "name": "Bob" }
+  ]
+}
