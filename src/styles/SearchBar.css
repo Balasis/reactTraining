@@ -1,0 +1,20 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 9999px; /* pill shape */
+    padding: 0 0.5rem;
+    background-color: #f9f9f9;
+    width: 300px; /* adjust as needed */
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    flex: 1;
+}
+
+.search-bar button {
+    margin-left: 0.5rem;
+}

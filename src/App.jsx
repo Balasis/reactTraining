@@ -1,27 +1,15 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from '@components/Header/Header';
+import Home from './pages/Home';
 
-function App() {
-  const [score, setScore] = useState(0);
-
-  function increase(){
-    setScore(score + 1);
-  }
-
-  function reset(){
-    setScore(0);
-  }
+export default function App() {
     return (
-        <div style={{ padding: 20 }}>
-        <h1>Score: {score}</h1>
-
-            <button onClick ={increase}>
-                +1
-            </button>
-            <button onClick={reset} style={{ marginLeft: 10 }}>
-                Reset
-            </button>
-        </div>
+        <Router>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                {/* Later you can add more pages */}
+            </Routes>
+        </Router>
     );
 }
-
-export default App;
