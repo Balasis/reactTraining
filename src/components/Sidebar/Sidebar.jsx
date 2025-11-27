@@ -24,7 +24,7 @@ export default function Sidebar({ isOpen, onClose }) {
         <ul>
           {categories.map(cat => (
             <li key={cat.id}>
-              <a href={cat.url}>
+              <a href={cat.link}>
                 <img src={cat.image} alt={cat.title} />
                 <span>{cat.title}</span>
               </a>
