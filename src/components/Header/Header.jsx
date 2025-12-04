@@ -1,7 +1,7 @@
 // Header.jsx
 import Logo from '@components/Header/Logo';
 import SearchBar from '@components/Header/SearchBar';
-import UserIcon from '@components/Header/UserIcon';
+import UserMenu from '@components/Header/UserMenu.jsx';
 import CartIcon from '@components/Header/CartIcon';
 import '@styles/Header.css';
 
@@ -11,7 +11,7 @@ export default function Header({ onOpenSidebar }) {
             <Logo />
             <SearchBar onOpenSidebar ={onOpenSidebar}/>
             <div className="header-right">
-                <UserIcon />
+                <UserMenu />
                 <CartIcon />
             </div>
         </header>

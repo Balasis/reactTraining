@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import "@styles/Sidebar.css";
+import API_BASE from "@apiBbase";
 
 export default function Sidebar({ isOpen, onClose }) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/categories")
+    fetch(`${API_BASE}/categories`)
       .then(res => res.json())
       .then(data => setCategories(data))
       .catch(err => console.log("Error loading categories:", err));
