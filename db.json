@@ -5,8 +5,8 @@
     { "id": 3, "name": "Jeans", "price": 49.99 }
   ],
   "users": [
-    { "id": 1, "name": "Alice" },
-    { "id": 2, "name": "Bob" }
+    { "id": 1, "username": "Alice" ,"password": "8246"},
+    { "id": 2, "username": "Bob", "password": "8246"}
   ],
   "categories": [
     {

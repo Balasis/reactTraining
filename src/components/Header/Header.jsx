@@ -6,6 +6,7 @@ import CartIcon from '@components/Header/CartIcon';
 import '@styles/Header.css';
 
 export default function Header({ onOpenSidebar }) {
+    console.log("Header was parsed");
     return (
         <header className="header">
             <Logo />

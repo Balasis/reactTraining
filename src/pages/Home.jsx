@@ -1,24 +1,31 @@
 // pages/Home.jsx
 import Header from "@components/Header/Header";
 import Sidebar from "@components/Sidebar/Sidebar";
-import { useState, useEffect } from "react";
+import { AuthContext } from "@context/AuthContext";
+import { useContext,useState } from "react";
 
 export default function Home() {
+    const {user,loading} = useContext(AuthContext);
     const [sidebarOpen, setSidebarOpen] = useState(false);
-     console.log("Home render");
 
-    return (
-        <div>
-            <Header onOpenSidebar={() => setSidebarOpen(true)} />
+    if(loading){
+        return <div>loading...</div>
+    }else{
+        return (
+            <div>
+                <Header onOpenSidebar={() => setSidebarOpen(true)} />
 
-            <Sidebar 
-                isOpen={sidebarOpen} 
-                onClose={() => setSidebarOpen(false)} 
-            />
+                <Sidebar
+                    isOpen={sidebarOpen}
+                    onClose={() => setSidebarOpen(false)}
+                />
 
-            <main style={{ padding: "2rem" }}>
-                <h1>Welcome to the Shop</h1>
-            </main>
-        </div>
-    );
+                <main>
+                    <h1>Welcome to the Shop {user ? user.username : "member" }</h1>
+
+                </main>
+            </div>
+        );
+    }
+
 }
