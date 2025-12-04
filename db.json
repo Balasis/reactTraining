@@ -12,19 +12,19 @@
     {
       "id": 1,
       "title": "Laptops",
-      "image": "src/assets/logo.png",
+      "image": "backend_generated/categories/logo.png",
       "link": "/category/laptops"
     },
     {
       "id": 2,
       "title": "Headphones",
-      "image": "src/assets/logo.png",
+      "image":  "backend_generated/categories/logo.png",
       "link": "/category/headphones"
     },
     {
       "id": 3,
       "title": "Keyboards",
-      "image": "src/assets/logo.png",
+      "image":  "backend_generated/categories/logo.png",
       "link": "/category/keyboards"
     }
   ]
