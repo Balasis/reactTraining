@@ -1,20 +1,114 @@
+.search-bar-wrapper{
+    max-width:50%;
+    height:var(--logo-header-height);
+    width:50%;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 9999px; /* pill shape */
-    padding: 0 0.5rem;
+    border-radius: 5em;
+    padding: 0 0;
     background-color: #f9f9f9;
-    width: 300px; /* adjust as needed */
+    min-width: fit-content;
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow: hidden;
 }
 
 .search-bar input {
+    background-color:var(--content-background-color);
     border: none;
     outline: none;
-    padding: 0.5rem;
-    flex: 1;
+    padding: 0 0.5em 0 3.5em;
+    flex-grow:1;
+    height:100%;
+    min-width:0;
 }
 
-.search-bar button {
-    margin-left: 0.5rem;
+.search-bar .category-btn {
+    color:grey;
+    background-color:var(--content-background-color);
+    padding:1.5em;
+    padding-left:1em;
+    border-radius:0;
+    text-align: center;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+    gap:1em;
+    border:0;
+    border-left:0.1em solid grey;
+}
+
+.search-bar .category-btn:hover{
+    color:black;
+}
+
+.search-bar .category-btn::before{
+    content: "";
+    display: block;
+    text-align:center;
+    line-height: 0.5em;
+    height:1em;
+    margin:0;
+    width:1.2em;
+    position: relative;
+    color:white;
+    background:
+            linear-gradient(black, black) top / 100% 0.15em,
+            linear-gradient(black, black) center / 100% 0.17em,
+            linear-gradient(black, black) bottom / 100% 0.15em;
+
+    background-repeat: no-repeat;
+}
+
+
+
+.search-bar .search-button{
+    position:absolute;
+    display:flex;
+    border:none;
+    left:0.4em;
+    background-color:transparent;
+    padding:0.6em;
+
+}
+
+.search-bar .search-button:hover{
+    scale:1.05;
+}
+
+
+.search-popup {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    border-radius: 0.5em;
+    z-index: 999;
+    max-height: 20em;
+    overflow-y: auto;
+    right:0;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.search-popup .search-item{
+
+    border-bottom:1px solid #eee;
+    width:100%;
+}
+
+.search-popup .search-item a{
+    padding:0.5em 1em;
+    width:100%;
+    display:block;
+}
+
+.search-popup .search-item a:hover{
+    background-color:lightblue;
 }

@@ -1,14 +1,23 @@
 .header {
+    background-color: var(--color-primary);
+    width:100%;
+    display:flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height:5em;
+}
+
+.header .header-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 0.5em 1em;
+    width:100%;
+    max-width:var(--content-max-width);
 }
 
 .header-right {
     display: flex;
-    gap: 1rem;
+    gap: 1em;
     align-items: center;
 }

@@ -1,4 +1,9 @@
+
+.logo{
+    height: var(--logo-header-height);
+}
+
 .logo img {
-    height: 40px; /* adjust as needed */
+    height:100%;
     cursor: pointer;
 }

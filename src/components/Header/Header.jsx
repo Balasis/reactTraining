@@ -9,11 +9,13 @@ export default function Header({ onOpenSidebar }) {
     console.log("Header was parsed");
     return (
         <header className="header">
-            <Logo />
-            <SearchBar onOpenSidebar ={onOpenSidebar}/>
-            <div className="header-right">
-                <UserMenu />
-                <CartIcon />
+            <div className="header-content">
+                <Logo />
+                <SearchBar onOpenSidebar ={onOpenSidebar}/>
+                <div className="header-right">
+                    <UserMenu />
+                    <CartIcon />
+                </div>
             </div>
         </header>
     );
