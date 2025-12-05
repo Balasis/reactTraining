@@ -1,8 +1,17 @@
 {
   "products": [
-    { "id": 1, "name": "T-shirt", "price": 19.99 },
-    { "id": 2, "name": "Sneakers", "price": 79.99 },
-    { "id": 3, "name": "Jeans", "price": 49.99 }
+    {
+      "id": 1,"name": "T-shirt T-shirt long message test triggering elipsis yeap T-shirt T-shirt long message test triggering elipsis yeap","price": 19.99,"rating": 3.5,"numRatings": 12,"image": "/backend_generated/products/tshirt.avif"
+    },
+    {
+      "id": 2,"name": "Dossete","price": 79.99,"rating": 2.8,"numRatings": 34,"image": "/backend_generated/products/DOSETE.avif"
+    },
+    {
+      "id": 3,"name": "AMD Radeon","price": 49.99,"rating": 4.3,"numRatings": 21,"image": "/backend_generated/products/AMDRadeon.avif"
+    },
+    {
+      "id": 4,"name": "Samsung Tv","price": 129.99,"rating": 1.7,"numRatings": 15,"image": "/backend_generated/products/SamsungTv.avif"
+    }
   ],
   "users": [
     { "id": 1, "username": "john" ,"password": "8246","profileImg":"backend_generated/users/myimg.jpeg"},
