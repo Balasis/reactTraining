@@ -2,12 +2,22 @@
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 import "@styles/About.css";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import Sidebar from "@components/Sidebar/Sidebar.jsx";
 
 export default function About() {
+
+
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }, []);
+
     useEffect(() => {
         const line = document.getElementById("AboutUsLine");
         const sections = document.querySelectorAll(".about-main-content section");
+
         if (line && sections.length) {
             const firstSectionTop = sections[0].offsetTop;
             const lastSectionBottom = sections[sections.length - 1].offsetTop
@@ -18,8 +28,11 @@ export default function About() {
 
     return (
         <div className="aboutUsPage">
-            <Header />
-
+            <Header onOpenSidebar={() => setSidebarOpen(true)} />
+            <Sidebar
+                isOpen={sidebarOpen}
+                onClose={() => setSidebarOpen(false)}
+            />
             <main>
                 <div className="about-main-content">
                     <h1>About Us</h1>

@@ -1,9 +1,14 @@
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 import "@styles/FAQ.css";
-import { useState } from "react";
+import {useEffect, useState} from "react";
+import Sidebar from "@components/Sidebar/Sidebar.jsx";
 
 export default function FAQ() {
+
+
+
+    const [sidebarOpen, setSidebarOpen] = useState(false);
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqs = [
@@ -62,9 +67,17 @@ export default function FAQ() {
         </div>
     );
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }, []);
+
     return (
         <div className="faqPage">
-            <Header />
+            <Header onOpenSidebar={() => setSidebarOpen(true)} />
+            <Sidebar
+                isOpen={sidebarOpen}
+                onClose={() => setSidebarOpen(false)}
+            />
             <main>
                 <div className="faq-main-content">
                     <h1>FAQs</h1>

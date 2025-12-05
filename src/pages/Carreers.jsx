@@ -1,11 +1,22 @@
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 import "@styles/Careers.css";
+import Sidebar from "@components/Sidebar/Sidebar.jsx";
+import {useEffect, useState} from "react";
 
 export default function Careers() {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }, []);
+
     return (
         <div>
-            <Header />
+            <Header onOpenSidebar={() => setSidebarOpen(true)} />
+            <Sidebar
+                isOpen={sidebarOpen}
+                onClose={() => setSidebarOpen(false)}
+            />
 
             <main>
                 <div className="careers-main-content">
