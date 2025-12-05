@@ -37,12 +37,12 @@ export default function Carousel({ images = [], autoDelay = 3000, manualPause = 
     };
 
     useEffect(() => {
-        startAuto();
-        return () => {
-            clearTimeout(timeoutRef.current);
-            clearTimeout(manualTimeoutRef.current);
-        };
-    }, [index, images.length]);
+        timeoutRef.current = setTimeout(() => {
+            setIndex(prev => (prev + 1) % images.length);
+        }, autoDelay);
+
+        return () => clearTimeout(timeoutRef.current);
+    }, [index, images.length, autoDelay]);
 
     return (
         <div className="carousel">

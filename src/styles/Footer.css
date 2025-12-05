@@ -1,0 +1,47 @@
+/* styles/Footer.css */
+.footer {
+    background-color: #101010;
+    color: #fff;
+    padding: 3em 0 1em;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.footer-column h4 {
+    margin-bottom: 0.8em;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.5em;
+}
+
+.footer-column li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column li a:hover {
+    color: rgb(0, 166, 255);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2em;
+    color: #777;
+    font-size: 0.8em;
+}

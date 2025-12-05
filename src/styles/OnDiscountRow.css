@@ -1,9 +1,0 @@
-.OnDiscountRow{
-    position: relative;
-    width: 100%;
-    min-height: 21.875em;
-    overflow: hidden;
-    display:flex;
-    justify-content: space-between;
-}
-

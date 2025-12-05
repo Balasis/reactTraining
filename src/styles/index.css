@@ -65,11 +65,8 @@ main{
 }
 
 .home-main-content > *{
-  margin-top: 3em;
-}
-
-.home-main-content:last-child{
-  margin-bottom:3em;
+  margin-top: 4.5em;
+  margin-bottom:4.5em;
 }
 
 a {
