@@ -1,4 +1,4 @@
-// components/Footer/Footer.jsx
+import { Link } from "react-router-dom";
 import "@styles/Footer.css";
 
 export default function Footer() {
@@ -8,41 +8,40 @@ export default function Footer() {
                 <div className="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/press">Press</a></li>
-                        <li><a href="/careers">Careers</a></li>
+                        <li><Link to="/about">About Us</Link></li>
+                        <li><Link to="/careers">Careers</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-column">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/faq">FAQ</a></li>
-                        <li><a href="/shipping">Shipping & Returns</a></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/faq">FAQ</Link></li>
+                        <li><Link to="/shipping">Shipping & Returns</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-column">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms of Service</a></li>
-                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><Link to="/privacy">Privacy Policy</Link></li>
+                        <li><Link to="/terms">Terms of Service</Link></li>
+                        <li><Link to="/cookies">Cookie Policy</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-column">
                     <h4>Contact</h4>
                     <ul>
-                        <li>Email: <a href="mailto:support@eshop.com">support@eshop.com</a></li>
-                        <li>Phone: +30 210 1234567</li>
+                        <li>Email: <Link to="mailto:yadayadaAT@gmail.com">yadayadaAT@gmail.com</Link></li>
+                        <li>Phone: +30 210 0906669</li>
                     </ul>
                 </div>
             </div>
 
             <div className="footer-bottom">
-                © {new Date().getFullYear()} AthensTechEshop. All rights reserved 🤔
+                © {new Date().getFullYear()} WannaBeEshop. All rights reserved 🤔
             </div>
         </footer>
     );
