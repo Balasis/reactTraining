@@ -1,5 +1,6 @@
 // pages/Home.jsx
 import Header from "@components/Header/Header";
+import Carousel from "@components/Carousel";
 import Sidebar from "@components/Sidebar/Sidebar";
 import { AuthContext } from "@context/AuthContext";
 import { useContext,useState } from "react";
@@ -21,8 +22,13 @@ export default function Home() {
                 />
 
                 <main>
-                    <h1>Welcome to the Shop {user ? user.username : "member" }</h1>
-
+                    <div className="main-content">
+                        <Carousel images={[
+                            "/static_frontend/images/banners/banner1.png",
+                            "/static_frontend/images/banners/banner2.png",
+                            "/static_frontend/images/banners/banner3.png"
+                        ]}/>
+                    </div>
                 </main>
             </div>
         );

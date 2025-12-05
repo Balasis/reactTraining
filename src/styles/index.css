@@ -1,6 +1,7 @@
 :root {
   --color-primary: #fff;
   --content-max-width:80em;
+  --headers-height:5em;
   --logo-header-height:3em;
   --left-header-menu-height:calc( var(--logo-header-height) - 0.5em);
   --content-background-color:#f1f1f1;
@@ -46,6 +47,25 @@ body {
   width:100%;
   color: #213547;
 }
+
+main{
+  display:flex;
+  width:100%;
+  justify-content: center;
+  min-height:calc(100vh - var(--headers-height));
+
+}
+
+.main-content{
+  padding: 3em 0;
+  max-width:var(--content-max-width);
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height:100%;
+}
+
 
 a {
   font-weight: 500;

@@ -7,6 +7,48 @@ export default function SearchBar({ onOpenSidebar }) {
     const [results, setResults] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
     const searchWrapper = useRef(null);
+    const placeholderRef = useRef(null);
+
+    useEffect(() => {
+        const daMessages = [
+            "I clicked the cart, my hopes were high...",
+            "Then saw the price, I wanted to cry...",
+            "The checkout blinked, a fearsome sight...",
+            "My wallet gasped, it took to flight...",
+            "Yet still I stayed, scrolling all night!!!"
+        ];
+
+        let textIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        const typeEffect = () => {
+            const current = daMessages[textIndex];
+            let delay = deleting ? 25 : 75;
+
+            if (!deleting && charIndex === current.length) {
+                delay = 1500;
+                deleting = true;
+            } else if (deleting && charIndex === 0) {
+                deleting = false;
+                textIndex = (textIndex + 1) % daMessages.length;
+            }
+
+            if (placeholderRef.current) {
+                const cursor = charIndex % 2 === 0 ? "|" : "";
+                placeholderRef.current.placeholder =
+                    current.slice(0, charIndex) + cursor;
+            }
+
+            if (!deleting) charIndex++;
+            else charIndex--;
+
+            setTimeout(typeEffect, delay);
+        };
+
+        typeEffect();
+
+    }, []);
 
     useEffect(() => {
         if (!query.trim()) {
@@ -41,7 +83,7 @@ export default function SearchBar({ onOpenSidebar }) {
         <div className="search-bar-wrapper" ref={searchWrapper} style={{ position: "relative", flexGrow: 1 }}>
         <div className="search-bar">
             <button className="search-button" onClick={() => console.log("Search clicked:", query)}>🔍</button>
-            <input size="1" type="text" placeholder="Search products..." value={query} onChange={e => setQuery(e.target.value)} onFocus={() => setShowPopup(true)} />
+            <input ref={placeholderRef} size="1" type="text" value={query} onChange={e => setQuery(e.target.value)} onFocus={() => setShowPopup(true)} />
             <button className="category-btn" onClick={onOpenSidebar}>Categories</button>
         </div>
 

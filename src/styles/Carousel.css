@@ -1,0 +1,65 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 21.875em;
+    overflow: hidden;
+    border-radius: 0.75em;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 1.5s ease;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    padding: 0.625em 0.875em;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-arrow.left {
+    left: 0.9375em;
+}
+
+.carousel-arrow.right {
+    right: 0.9375em;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 0.9375em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.dot {
+    width: 0.75em;
+    height: 0.375em;
+    background: rgba(255,255,255,0.6);
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: width 0.2s ease;
+}
+
+.dot.active {
+    width: 1.75em;
+    background: white;
+}
