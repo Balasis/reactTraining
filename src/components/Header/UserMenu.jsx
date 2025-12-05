@@ -11,9 +11,9 @@ export default function UserMenu() {
 
     if (!user) {
         return (
-            <div className="user-icon">
-                <Link to="/login">
-                    <img src={userSvg} alt="Login" />
+            <div className="user-icon" >
+                <Link to="/login" title="Login">
+                    <img src={userSvg}  alt="Login" />
                 </Link>
             </div>
         );
@@ -22,7 +22,7 @@ export default function UserMenu() {
     return (
         <div className="user-menu">
             <img
-                src={userSvg}
+                src={user.profileImg}
                 alt="User"
                 onClick={() => setOpen(!open)}
                 className="clickable"

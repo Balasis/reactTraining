@@ -2,7 +2,11 @@
   --color-primary: #fff;
   --content-max-width:80em;
   --logo-header-height:3em;
+  --left-header-menu-height:calc( var(--logo-header-height) - 0.5em);
   --content-background-color:#f1f1f1;
+  --header-items-border:0.15em solid transparent;
+  --header-items-border-hover:0.15em solid pink;
+
 }
 
 *,
@@ -45,12 +49,7 @@ body {
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: none; /* inherit can be unpredictable */
-}
-
-a:hover {
-  color: #535bf2;
+  text-decoration: none;
 }
 
 h1 {

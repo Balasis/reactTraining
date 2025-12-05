@@ -20,10 +20,12 @@ export default function AuthProvider({ children }) {
         try {
             const res = await fetch(`${API_BASE}/users`);
             const users = await res.json();
+            //TODO: uncomment after dev, here we skip username and password to speed things up giving a predefined
 
-            const foundUser = users.find(u => u.username.toLowerCase() === username.toLowerCase());
+            // const foundUser = users.find(u => u.username.toLowerCase() === username.toLowerCase());
+            const foundUser = users.find(u => u.username.toLowerCase() === "john");
             if (!foundUser) throw new Error("User not found");
-            if (foundUser["password"] !== password){ throw new Error("Wrong password") }
+            // if (foundUser["password"] !== password){ throw new Error("Wrong password") }
             setUser(foundUser);
             localStorage.setItem("user",JSON.stringify(foundUser)); //TODO : remove in prod
             return true;

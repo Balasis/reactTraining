@@ -1,6 +1,28 @@
+
+.cart-icon{
+    width:var(--left-header-menu-height);
+    height:var(--left-header-menu-height);
+    border-radius: 50%;
+    background-color:var(--content-background-color);
+    overflow: hidden;
+    border:var(--header-items-border)
+}
+
+.cart-icon:hover{
+    border:var(--header-items-border-hover);
+}
+
+.cart-icon a{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .cart-icon img {
-    width: 24px;
-    height: 24px;
+    height:60%;
+    width:60%;
     cursor: pointer;
-    display: block;
 }
