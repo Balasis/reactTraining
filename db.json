@@ -2,23 +2,166 @@
   "products": [
     {
       "id": 1,
-      "name": "T-shirt T-shirt long message test triggering elipsis yeap T-shirt T-shirt long message test triggering elipsis yeap",
-      "price": 19.99,"rating": 3.5,"numRatings": 12,"image": "/backend_generated/products/tshirt.avif","discount": true
+      "name": "Basic Cotton T-Shirt",
+      "price": 19.99,
+      "rating": 3.5,
+      "numRatings": 12,
+      "image": "/backend_generated/products/tshirt.avif",
+      "discount": true,
+      "categoryId": 1
     },
     {
       "id": 2,
-      "name": "Dossete",
-      "price": 79.99,"rating": 2.8,"numRatings": 34,"image": "/backend_generated/products/DOSETE.avif","discount": true
+      "name": "Dossete Wireless Headphones",
+      "price": 79.99,
+      "rating": 2.8,
+      "numRatings": 34,
+      "image": "/backend_generated/products/DOSETE.avif",
+      "discount": true,
+      "categoryId": 1
     },
     {
       "id": 3,
-      "name": "AMD Radeon",
-      "price": 49.99,"rating": 4.3,"numRatings": 21,"image": "/backend_generated/products/gpu.jpeg","discount": true
+      "name": "AMD Radeon GPU XT",
+      "price": 249.99,
+      "rating": 4.3,
+      "numRatings": 21,
+      "image": "/backend_generated/products/gpu.jpeg",
+      "discount": false,
+      "categoryId": 1
     },
     {
       "id": 4,
-      "name": "Samsung Tv",
-      "price": 129.99,"rating": 1.7,"numRatings": 15,"image": "/backend_generated/products/tv.jpeg","discount": true
+      "name": "Samsung Smart TV 40”",
+      "price": 129.99,
+      "rating": 1.7,
+      "numRatings": 15,
+      "image": "/backend_generated/products/tv.jpeg",
+      "discount": false,
+      "categoryId": 1
+    },
+
+    {
+      "id": 5,
+      "name": "Studio T-Shirt Edition",
+      "price": 14.99,
+      "rating": 4.1,
+      "numRatings": 19,
+      "image": "/backend_generated/products/tshirt.avif",
+      "discount": true,
+      "categoryId": 2
+    },
+    {
+      "id": 6,
+      "name": "Noise-Cancelling Headphones X",
+      "price": 59.99,
+      "rating": 3.2,
+      "numRatings": 47,
+      "image": "/backend_generated/products/DOSETE.avif",
+      "discount": false,
+      "categoryId": 2
+    },
+    {
+      "id": 7,
+      "name": "Gaming GPU Ultra",
+      "price": 199.99,
+      "rating": 4.6,
+      "numRatings": 88,
+      "image": "/backend_generated/products/gpu.jpeg",
+      "discount": true,
+      "categoryId": 2
+    },
+    {
+      "id": 8,
+      "name": "Smart TV Mini 24”",
+      "price": 89.99,
+      "rating": 2.4,
+      "numRatings": 9,
+      "image": "/backend_generated/products/tv.jpeg",
+      "discount": false,
+      "categoryId": 2
+    },
+
+    {
+      "id": 9,
+      "name": "Heavy Duty T-Shirt",
+      "price": 24.99,
+      "rating": 3.9,
+      "numRatings": 31,
+      "image": "/backend_generated/products/tshirt.avif",
+      "discount": false,
+      "categoryId": 3
+    },
+    {
+      "id": 10,
+      "name": "Premium Audio Headphones",
+      "price": 99.99,
+      "rating": 4.0,
+      "numRatings": 54,
+      "image": "/backend_generated/products/DOSETE.avif",
+      "discount": true,
+      "categoryId": 3
+    },
+    {
+      "id": 11,
+      "name": "Radeon RX Series",
+      "price": 299.99,
+      "rating": 4.7,
+      "numRatings": 113,
+      "image": "/backend_generated/products/gpu.jpeg",
+      "discount": true,
+      "categoryId": 3
+    },
+    {
+      "id": 12,
+      "name": "Samsung LED TV 55”",
+      "price": 499.99,
+      "rating": 3.3,
+      "numRatings": 28,
+      "image": "/backend_generated/products/tv.jpeg",
+      "discount": false,
+      "categoryId": 3
+    },
+
+    {
+      "id": 13,
+      "name": "Eco Cotton Shirt",
+      "price": 17.99,
+      "rating": 2.9,
+      "numRatings": 8,
+      "image": "/backend_generated/products/tshirt.avif",
+      "discount": true,
+      "categoryId": 4
+    },
+    {
+      "id": 14,
+      "name": "Budget Friendly Headset",
+      "price": 25.99,
+      "rating": 3.0,
+      "numRatings": 16,
+      "image": "/backend_generated/products/DOSETE.avif",
+      "discount": false,
+      "categoryId": 4
+    },
+    {
+      "id": 15,
+      "name": "Radeon Entry Level GPU",
+      "price": 129.99,
+      "rating": 4.0,
+      "numRatings": 40,
+      "image": "/backend_generated/products/gpu.jpeg",
+      "discount": true,
+      "categoryId": 4
+    },
+    {
+      "id": 16,
+      "name": "Samsung HD Monitor 27”",
+      "price": 159.99,
+      "rating": 3.1,
+      "numRatings": 12,
+      "image": "/backend_generated/products/tv.jpeg",
+      "discount": true,
+      "categoryId": 4
     }
   ],
   "users": [

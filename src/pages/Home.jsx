@@ -18,13 +18,13 @@ export default function Home() {
                         "/static_frontend/images/banners/banner3.png"
                     ]} />
 
-                    <ProductsRow title="🔥 Hot Deals" type="discounted" limit={6} />
+                    <ProductsRow title="🔥 Hot Deals" type="discounted" limit={4} />
 
-                    <ProductsRow title="🌟 Top Rated" type="top-rated" limit={6} />
+                    <ProductsRow title="🌟 Top Rated" type="top-rated" limit={5} />
 
-                    <ProductsRow title="💰 Under €20" type="price-less-than" limit={20} priceCap={20} />
+                    <ProductsRow title="💰 Under €20" type="price-less-than" limit={3} priceCap={20} />
 
-                    <ProductsRow title="🚀 Trending Picks" type="random" limit={6} />
+                    <ProductsRow title="🚀 Trending Picks" type="random" limit={5} />
 
                 </div>
             </main>

@@ -16,8 +16,7 @@ export default function ProductsRow({ title, type, limit = 6, priceCap }) {
             try {
                 const params = new URLSearchParams();
 
-                params.append("limit", limit);
-
+                // type-specific params (optional, for future real backend)
                 switch (type) {
                     case "discounted":
                         params.append("discount", "true");
@@ -41,7 +40,13 @@ export default function ProductsRow({ title, type, limit = 6, priceCap }) {
                 }
 
                 const res = await fetch(`${API_BASE}/products?${params.toString()}`, { signal });
-                const data = await res.json();
+                let data = await res.json();
+
+                // front-end limit enforcement
+                if (limit != null) {
+                    data = data.slice(0, limit);
+                }
+
                 setProducts(data);
             } catch (err) {
                 if (err.name !== "AbortError") console.error("ProductsRow fetch error:", err);
