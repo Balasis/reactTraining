@@ -29,8 +29,8 @@ export default function Category() {
                     maxVotes: filters.maxVotes,
                 });
 
-                const url = `${API_BASE}/categories/${id}/products?${params.toString()}`;
-
+                const url = `${API_BASE}/products?${params.toString()}`;
+                // const url = `${API_BASE}/categories/${id}/products?${params.toString()}`;
                 const res = await fetch(url);
                 const data = await res.json();
 
