@@ -11,7 +11,7 @@ export default function Category() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [filters, setFilters] = useState({ priceRange: [0, 5000], minVotes: 0, maxVotes: 5 });
     const [products, setProducts] = useState([]);
-
+    console.log("triggered");
     const debounceTimeout = useRef(null);
 
     useEffect(() => {
@@ -36,26 +36,21 @@ export default function Category() {
                 console.error(err);
                 setProducts([]);
             }
-        }, 400); // 400ms debounce
+        }, 1000);
 
         return () => clearTimeout(debounceTimeout.current);
     }, [filters]);
 
     return (
-        <div className="category-page">
-            <Header onOpenSidebar={() => setSidebarOpen(true)} />
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-
             <main className="category-main">
+
                 <FiltersPanel filters={filters} setFilters={setFilters} />
                 <section className="products-container">
                     {products.map((p) => (
                         <ProductCard key={p.id} product={p} />
                     ))}
                 </section>
-            </main>
 
-            <Footer />
-        </div>
+            </main>
     );
 }

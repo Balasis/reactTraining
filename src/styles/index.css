@@ -47,29 +47,12 @@ body {
   width:100%;
 }
 
-
 main{
   display:flex;
   width:100%;
   justify-content: center;
   min-height: calc(100vh - var(--headers-height));
 }
-
-.home-main-content{
-  max-width:var(--content-max-width);
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.home-main-content > *{
-  margin-top: 4.5em;
-  margin-bottom:4.5em;
-}
-
-
 
 a {
   font-weight: 500;

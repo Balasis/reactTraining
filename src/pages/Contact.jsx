@@ -1,22 +1,12 @@
-import Header from "@components/Header/Header";
-import Footer from "@components/Footer/Footer";
 import "@styles/Contact.css";
-import Sidebar from "@components/Sidebar/Sidebar.jsx";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 
 export default function Contact() {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }, []);
 
     return (
-        <div className="contactPage">
-            <Header onOpenSidebar={() => setSidebarOpen(true)} />
-            <Sidebar
-                isOpen={sidebarOpen}
-                onClose={() => setSidebarOpen(false)}
-            />
             <main>
                 <div className="contact-main-content">
                     <div className="infoAndMapWrapper">
@@ -48,8 +38,5 @@ export default function Contact() {
                     </div>
                 </div>
             </main>
-
-            <Footer />
-        </div>
     );
 }

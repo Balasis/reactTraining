@@ -8,7 +8,7 @@ export default function RatingStarsRadio({ filters, setFilters }) {
         <div className="rating-stars-radio">
             {options.map((minRating) => (
                 <label key={minRating} className="star-row-label">
-                    {/* Stars first */}
+
                     {[...Array(totalStars)].map((_, i) => {
                         const starNumber = i + 1;
                         const isOn = starNumber <= minRating;
@@ -18,10 +18,7 @@ export default function RatingStarsRadio({ filters, setFilters }) {
                             </span>
                         );
                     })}
-                    {/* Radio button on the right */}
-                    <input
-                        type="radio" className="ratingStarsRadioClass"
-                        name="ratingStars"
+                    <input type="radio" className="ratingStarsRadioClass" name="ratingStars"
                         onChange={() =>
                             setFilters({ ...filters, minVotes: minRating, maxVotes: 5 })
                         }

@@ -27,12 +27,6 @@ export default function About() {
     }, []);
 
     return (
-        <div className="aboutUsPage">
-            <Header onOpenSidebar={() => setSidebarOpen(true)} />
-            <Sidebar
-                isOpen={sidebarOpen}
-                onClose={() => setSidebarOpen(false)}
-            />
             <main>
                 <div className="about-main-content">
                     <h1>About Us</h1>
@@ -68,8 +62,5 @@ export default function About() {
                     </section>
                 </div>
             </main>
-
-            <Footer />
-        </div>
     );
 }

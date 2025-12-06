@@ -32,7 +32,7 @@ export default function FiltersPanel({ filters, setFilters }) {
 
             {/* Rating filter */}
             <div className="filter-group filter-votes">
-                <label>Rating 🌟:</label>
+                <label>Minimum Rating 🌟:</label>
                 <RatingRadioGroup filters={filters} setFilters={setFilters} />
             </div>
         </aside>

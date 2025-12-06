@@ -11,13 +11,6 @@ export default function Careers() {
     }, []);
 
     return (
-        <div>
-            <Header onOpenSidebar={() => setSidebarOpen(true)} />
-            <Sidebar
-                isOpen={sidebarOpen}
-                onClose={() => setSidebarOpen(false)}
-            />
-
             <main>
                 <div className="careers-main-content">
                     <h1>Careers</h1>
@@ -62,8 +55,5 @@ export default function Careers() {
                     </section>
                 </div>
             </main>
-
-            <Footer />
-        </div>
     );
 }

@@ -1,14 +1,8 @@
-import Header from "@components/Header/Header";
-import Footer from "@components/Footer/Footer";
 import "@styles/FAQ.css";
 import {useEffect, useState} from "react";
-import Sidebar from "@components/Sidebar/Sidebar.jsx";
 
 export default function FAQ() {
 
-
-
-    const [sidebarOpen, setSidebarOpen] = useState(false);
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqs = [
@@ -72,13 +66,7 @@ export default function FAQ() {
     }, []);
 
     return (
-        <div className="faqPage">
-            <Header onOpenSidebar={() => setSidebarOpen(true)} />
-            <Sidebar
-                isOpen={sidebarOpen}
-                onClose={() => setSidebarOpen(false)}
-            />
-            <main>
+            <main className="faqPageMain">
                 <div className="faq-main-content">
                     <h1>FAQs</h1>
                     <section className="faq-section">
@@ -87,7 +75,5 @@ export default function FAQ() {
                     </section>
                 </div>
             </main>
-            <Footer />
-        </div>
     );
 }
