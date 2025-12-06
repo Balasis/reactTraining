@@ -6,7 +6,7 @@ import API_BASE from "@apiBbase";
 import "@styles/Category.css";
 
 export default function Category() {
-    const { id } = useParams();   // <-- GET CATEGORY ID FROM URL
+    const { id } = useParams();
 
     const [filters, setFilters] = useState({
         priceRange: [0, 5000],

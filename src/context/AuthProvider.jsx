@@ -21,6 +21,8 @@ export default function AuthProvider({ children }) {
             const res = await fetch(`${API_BASE}/users`);
             const users = await res.json();
             //TODO: uncomment after dev, here we skip username and password to speed things up giving a predefined
+//api auth/me  - > jwt header - user  and status code arnito..
+//httponly ahref - >   login jwt ->
 
             // const foundUser = users.find(u => u.username.toLowerCase() === username.toLowerCase());
             const foundUser = users.find(u => u.username.toLowerCase() === "john");

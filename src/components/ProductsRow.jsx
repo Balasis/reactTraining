@@ -16,25 +16,20 @@ export default function ProductsRow({ title, type, limit = 6, priceCap }) {
             try {
                 const params = new URLSearchParams();
 
-                // type-specific params (optional, for future real backend)
                 switch (type) {
                     case "discounted":
                         params.append("discount", "true");
                         break;
-
                     case "top-rated":
                         params.append("sort", "rating_desc");
                         break;
-
                     case "price-less-than":
                         if (priceCap == null) throw new Error("priceCap is required");
                         params.append("maxPrice", priceCap);
                         break;
-
                     case "random":
                         params.append("random", "true");
                         break;
-
                     default:
                         break;
                 }
@@ -42,10 +37,7 @@ export default function ProductsRow({ title, type, limit = 6, priceCap }) {
                 const res = await fetch(`${API_BASE}/products?${params.toString()}`, { signal });
                 let data = await res.json();
 
-                // front-end limit enforcement
-                if (limit != null) {
-                    data = data.slice(0, limit);
-                }
+                if (limit != null) data = data.slice(0, limit);
 
                 setProducts(data);
             } catch (err) {
@@ -73,9 +65,9 @@ export default function ProductsRow({ title, type, limit = 6, priceCap }) {
     }, []);
 
     return (
-        <div className="ProductsRow" ref={rowRef}>
+        <div className={`ProductsRow ${visible ? "visible" : ""}`} ref={rowRef}>
             <h2 className="row-title">{title}</h2>
-            <div className={`row-items ${visible ? "visible" : ""}`}>
+            <div className="row-items">
                 {products.map(p => (
                     <ProductCard key={p.id} product={p} />
                 ))}
