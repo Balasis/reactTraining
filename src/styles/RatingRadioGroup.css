@@ -1,0 +1,33 @@
+.rating-stars-radio {
+    display: flex;
+    flex-direction: column;
+    gap:0.2em 3em;
+    margin-top:1.5em;
+    margin-left:0.5em;
+}
+
+.star-row-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.star-row-label input[type="radio"] {
+    accent-color: #007bff;
+    width: 1em;
+    height: 1em;
+}
+
+.star-row-label .star-on {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.star-row-label .star-off {
+    color: grey;
+    font-size: 1.2em;
+}
+.ratingStarsRadioClass{
+    margin-left:1.5em
+}

@@ -1,0 +1,20 @@
+.price-radio-group {
+    display: flex;
+    margin-top: 1.5em;
+    justify-content: space-between;
+
+}
+.price-radio-group-a,.price-radio-group-b{
+    display:flex;
+    flex-direction: column;
+    gap:0.5em;
+}
+
+
+.price-radio-group label {
+    font-size: 0.85em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
